@@ -1,0 +1,31 @@
+body {
+    background:#332b20;
+    color:#e2d6c5;
+    font-family:宋体;
+    padding:30px;
+}
+.room { display:none; }
+.room.active { display:block; }
+.story-text {
+    font-size:17px;
+    line-height:1.8;
+    margin:20px 0;
+}
+.game-btn {
+    background:#4a3f30;
+    color:#e0d2c0;
+    border:1px solid #72624f;
+    padding:8px 16px;
+    margin:5px;
+    cursor:pointer;
+}
+.game-btn:disabled {
+    opacity:0.4;
+    cursor:default;
+    pointer-events:none;
+}
+#bag {
+    margin-top:30px;
+    padding-top:15px;
+    border-top:1px solid #5a4e3f;
+}
