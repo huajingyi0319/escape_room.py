@@ -1,9 +1,18 @@
-// 打字机动画
+// 打字机动画（Ghost Text 防 CLS）
 function typeWrite(el, text, speed = 25) {
-    el.innerText = "";
+    el.innerHTML = "";
+    // Ghost span holds the full text invisibly to reserve layout space
+    const ghost = document.createElement("span");
+    ghost.className = "ghost-text";
+    ghost.textContent = text;
+    // Typed span overlays the ghost span and receives characters one-by-one
+    const typed = document.createElement("span");
+    typed.className = "typed-text";
+    el.appendChild(ghost);
+    el.appendChild(typed);
     let i = 0;
     const timer = setInterval(() => {
-        el.innerText += text[i];
+        typed.textContent += text[i];
         i++;
         if (i >= text.length) clearInterval(timer);
     }, speed);
