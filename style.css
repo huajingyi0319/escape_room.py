@@ -7,9 +7,20 @@ body {
 .room { display:none; }
 .room.active { display:block; }
 .story-text {
+    position:relative;
     font-size:17px;
     line-height:1.8;
     margin:20px 0;
+}
+.ghost-text {
+    display:block;
+    visibility:hidden;
+}
+.typed-text {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
 }
 .game-btn {
     background:#4a3f30;
